@@ -1,0 +1,145 @@
+.photoSection {
+  width: 100%;
+  height: 100%;
+  background-color: #4f5b55;
+  color: #f4efe9;
+  overflow: hidden;
+}
+
+.photoSection > h2 {
+  margin-top: 60px;
+  text-align: center;
+  font-family: "Abramo Regular", serif;
+  font-size: clamp(5rem, 12vw, 8rem);
+  font-weight: 1000;
+}
+
+.photos {
+  padding: 200px 0 200px 0;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  position: relative;
+  left: 48%;
+  transform: translateX(-50%);
+}
+
+.photo {
+  width: 120%;
+  height: auto;
+}
+
+.photos > .photo_container:nth-child(1) > .photo {
+  position: relative;
+  transform: rotate(-15deg);
+  z-index: 2;
+}
+
+.photos > .photo_container:nth-child(2) > .photo {
+  position: relative;
+  transform: rotate(15deg);
+  z-index: 1;
+  bottom: -58px;
+}
+
+.photos > .photo_container:nth-child(3) > .photo {
+  position: relative;
+  transform: rotate(-10deg);
+  z-index: 2;
+  bottom: -5px;
+}
+
+.photos > .photo_container:nth-child(4) > .photo {
+  position: relative;
+  z-index: 3;
+  bottom: -55px;
+}
+
+.photos > .photo_container:nth-child(5) > .photo {
+  position: relative;
+  transform: rotate(10deg);
+  z-index: 4;
+  bottom: 10px;
+}
+
+.photos > .photo_container:nth-child(6) > .photo {
+  position: relative;
+  transform: rotate(2deg);
+  z-index: 5;
+  bottom: -70px;
+}
+
+.photos > .photo_container:nth-child(7) > .photo {
+  position: relative;
+  transform: rotate(15deg);
+  z-index: 6;
+  bottom: 50px;
+}
+
+.photo_container {
+  position: relative;
+}
+
+.arrow {
+  font-family: "Abramo Script", cursive;
+  font-weight: 600;
+  font-size: 4rem;
+  position: absolute;
+  text-wrap: nowrap;
+  display: flex;
+}
+
+.arrow > img {
+  position: relative;
+}
+
+.arrow2 {
+  z-index: 10;
+  bottom: -210px;
+  left: -90px;
+}
+.arrow2 > img {
+  width: 60px;
+  height: auto;
+  bottom: 25px;
+  left: 25px;
+}
+
+.arrow3 {
+  top: -130px;
+  left: -210px;
+}
+
+.arrow3 > img {
+  width: 45px;
+  height: auto;
+  bottom: -45px;
+  left: -30px;
+}
+
+.arrow4 {
+  flex-direction: column-reverse;
+  align-items: center;
+  bottom: -220px;
+  left: 70px;
+  z-index: 10;
+}
+
+.arrow4 > img {
+  width: auto;
+  height: 60px;
+  bottom: -50px;
+  left: 45px;
+}
+
+.arrow5 {
+  top: -200px;
+  right: -200px;
+  flex-direction: column;
+}
+
+.arrow5 > img {
+  width: auto;
+  height: 60px;
+  bottom: 50px;
+}

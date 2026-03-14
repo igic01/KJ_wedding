@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.contact > h2 {
+  text-align: center;
+  font-size: 142px;
+  color: #4f5b55;
+  font-family: "Abramo Regular", serif;
+  margin: 100px 0 40px 0;
+}
+
+.contact > p {
+  text-align: center;
+  font-size: 34px;
+  color: #4f5b55;
+  font-family: "Forum";
+}
+
+/* Background pattern */
+.envelop_pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.pattern {
+  position: absolute;
+  z-index: -1;
+  width: max-content;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(7deg);
+}
+
+.pattern > div {
+  color: #e4dcce;
+  display: flex;
+  gap: 200px;
+  font-size: 120px;
+  font-family: "Abramo Script", cursive;
+}
+
+/* Envelop design */
+.envelop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 2;
+  width: 1360px;
+  height: auto;
+  margin: auto;
+}
+
+.envelop > img {
+  grid-area: 1 / 1 / -1 / -1;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.form {
+  grid-area: 1 / 1 / -1 / -1;
+  width: 100%;
+  height: auto;
+  padding: 160px 120px;
+  display: flex;
+}
+
+.form > textarea {
+  resize: none;
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-family: "Homemade Apple";
+  font-size: 34px;
+  line-height: 40px;
+  padding: 20px;
+  margin-right: 70px;
+}
+
+.form > textarea::placeholder {
+  color: #b60000;
+  opacity: 0.3;
+}
+
+.info {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border-left: 1px solid black;
+  padding-left: 40px;
+}
+
+.stamp {
+  align-self: flex-end;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
+
+.stamp > img {
+  transform: rotate(15deg);
+  height: 200px;
+  width: auto;
+  position: relative;
+  right: 50px;
+  top: -15px;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  font-family: "Courier Prime", serif;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 5px;
+}
+
+.labels > label {
+  display: flex;
+  align-items: center;
+  font-family: "Courier Prime";
+}
+.labels > label > input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Homemade Apple";
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 40px,
+    #000 40px,
+    #000 41px
+  );
+  color: #b60000;
+  caret-color: black;
+  margin-left: 10px;
+}
+
+.info > input[type="submit"] {
+  width: fit-content;
+  border: 0;
+  outline: none;
+  padding: 15px 70px;
+  align-self: center;
+  background-color: #b60000;
+  color: #f4efe9;
+  font-size: 32px;
+
+  border-radius: 50px;
+  font-family: "Courier Prime";
+}
+@media (max-width: 1024px) {
+  .envelop {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: auto;
+    margin: auto;
+  }
+
+  .envelop > img {
+    transform: rotate(90deg);
+    width: 100%;
+    height: 100%;
+  }
+
+  .form {
+    grid-area: 1 / 1 / -1 / -1;
+    width: 100%;
+    height: auto;
+    padding: 160px 120px;
+    display: flex;
+  }
+}
