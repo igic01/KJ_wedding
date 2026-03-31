@@ -16,8 +16,20 @@
   font-display: swap;
 }
 
+:root {
+  --green: #4F5B55;
+  --beige: #e4dcce;
+  --text-size: clamp(16px, 1.5vw, 80px);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h2 {
+  font-size: clamp(40px, 16vw, 132px);
+  font-family: "Abramo Regular", serif;
+  text-align: center;
 }

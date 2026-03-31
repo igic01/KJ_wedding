@@ -1,0 +1,100 @@
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+    display: flex;
+}
+
+.hero::before {
+    content: "Katka";
+    position: absolute;
+    font-family: "Abramo Script", serif;
+    font-size: 200px;
+    line-height: 200px;
+    color: #e4dcce;
+    left: 10%;
+    top: 10%;
+}
+
+.hero::after {
+    content: "Jaro";
+    position: absolute;
+    font-family: "Abramo Script", serif;
+    font-size: 200px;
+    line-height: 200px;
+    color: #e4dcce;
+    right: 10%;
+    bottom: 10%;
+}
+
+.envelop {
+    width: min(90%, 450px);
+    margin: auto;
+    display: grid;
+    position: relative;
+}
+
+.envelop>.enve {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    grid-area: 1/1;
+}
+
+.envelop>.enveFront {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    grid-area: 1/1;
+    align-self: end;
+    z-index: 10;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.envelop>.card {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+}
+
+.envelop>.photo {
+    position: absolute;
+    width: 47%;
+    height: auto;
+    top: 160px;
+    transform: rotate(-9deg);
+}
+
+.envelop>.flowersOnPaper {
+    position: absolute;
+    position: absolute;
+    width: 38%;
+    height: auto;
+    top: 180px;
+    right: 0;
+}
+
+
+.flowers {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 92vh;
+    }
+
+    .hero::before {
+        left: 0;
+        top: 0;
+    }
+
+    .hero::after {
+        right: 0;
+        bottom: 0;
+    }
+
+}
