@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import photo1 from "../../public/photos/photo1.png";
@@ -15,10 +17,31 @@ import arrow3 from "../../public/arrows/arrow3.svg";
 import arrow4 from "../../public/arrows/arrow4.svg";
 import arrow5 from "../../public/arrows/arrow5.svg";
 import styles from "./Gallery.module.css";
+import { useRef, useState } from "react";
 
 export default function Gallery() {
+  const [isFullHeight, setIsFullHeight] = useState(false);
+  const galleryRef = useRef<HTMLDivElement | null>(null);
+
+  const handleToggle = () => {
+    const next = !isFullHeight;
+    setIsFullHeight(next);
+
+    // when closing (true -> false), scroll to top of this section
+    if (!next) {
+      requestAnimationFrame(() => {
+        galleryRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  };
+
   return (
-    <div className={styles.gallery}>
+    <div
+      ref={galleryRef}
+      className={`${styles.gallery} ${isFullHeight ? styles.galleryFull : ""}`}>
       <h2>Náš príbeh</h2>
       <div className={styles.photos}>
         <Image
@@ -60,7 +83,9 @@ export default function Gallery() {
       </div>
 
       <div className={styles.open}>
-        <button>skontrolujte viac</button>
+        <button type="button" onClick={handleToggle}>
+          {isFullHeight ? "skontrolujte menej" : "skontrolujte viac"}
+        </button>
       </div>
     </div >
   );
