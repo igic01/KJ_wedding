@@ -3,33 +3,31 @@
     position: relative;
     overflow: visible;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
 }
 
-.hero::before {
-    content: "Katka";
+.scriptName {
     position: absolute;
     font-family: "Abramo Script", serif;
-    font-size: 200px;
-    line-height: 200px;
+    font-size: max(120px, 12vw);
     color: #e4dcce;
+}
+
+.katka {
     left: 10%;
     top: 10%;
 }
 
-.hero::after {
-    content: "Jaro";
-    position: absolute;
-    font-family: "Abramo Script", serif;
-    font-size: 200px;
-    line-height: 200px;
-    color: #e4dcce;
+.jaro {
     right: 10%;
-    bottom: 10%;
+    bottom: 0%;
 }
 
 .envelop {
     width: min(90%, 450px);
-    margin: auto;
+    margin: -35px 0 0 0;
     display: grid;
     position: relative;
 }
@@ -48,7 +46,7 @@
     grid-area: 1/1;
     align-self: end;
     z-index: 10;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .envelop>.card {
@@ -77,24 +75,18 @@
     right: 0;
 }
 
-
-.flowers {
-    display: none;
-}
-
 @media (max-width: 1024px) {
-    .hero {
-        height: 92vh;
+    .envelop>.card {
+        width: 64%;
     }
 
-    .hero::before {
+    .katka {
         left: 0;
         top: 0;
     }
 
-    .hero::after {
+    .jaro {
         right: 0;
         bottom: 0;
     }
-
 }
